@@ -1,0 +1,9 @@
+node_modules/
+.git/
+src/
+tsconfig*.json
+vite.config.*
+postcss.config.js
+tailwind.config.js
+*.md
+.gitignore
