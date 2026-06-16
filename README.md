@@ -3,7 +3,13 @@
 > **用手势唤醒你的五张命运牌**  
 > 一款基于摄像头手势识别的创意塔罗牌互动网页应用。
 
-![Tech Stack](https://img.shields.io/badge/React-19-61DAFB?logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript) ![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer) ![MediaPipe](https://img.shields.io/badge/MediaPipe-Hands-0097A7?logo=mediapipe)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Netlify-00C7B7?style=for-the-badge)](https://resilient-croquembouche-ee1472.netlify.app)
+[![Tech Stack](https://img.shields.io/badge/React-19-61DAFB?logo=react&style=for-the-badge)](https://react.dev)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&style=for-the-badge)
+![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&style=for-the-badge)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&style=for-the-badge)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&style=for-the-badge)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-Hands-0097A7?logo=mediapipe&style=for-the-badge)
 
 ---
 
