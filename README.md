@@ -141,7 +141,33 @@ dist/
 
 ## 🌐 部署
 
-### 方式一：Nginx / 宝塔面板（推荐）
+### 方式一：Netlify（推荐，免费 HTTPS + 自动部署）
+
+#### 方案 A：通过 Git 自动部署（推荐）
+
+1. 在 [Netlify](https://app.netlify.com) 点击 **Add new site → Import an existing project**
+2. 授权 GitHub，选择 `Na0333/Gesture-Tarot` 仓库
+3. 构建配置已预设在 [`netlify.toml`](./netlify.toml)，Netlify 会自动识别：
+
+   | 设置项 | 值 |
+   |--------|-----|
+   | Build command | `npm run build` |
+   | Publish directory | `dist` |
+
+4. 点击 **Deploy**，等待部署完成
+5. 在 **Site settings → Domain** 中可配置自定义域名
+6. Netlify 自动提供 HTTPS，摄像头可以直接使用
+
+每次推送代码到 GitHub，Netlify 会自动重新构建部署。
+
+#### 方案 B：手动拖拽部署
+
+1. 本地构建：`npm run build`
+2. 打开 [Netlify](https://app.netlify.com) → **Sites**
+3. 将 `dist/` 文件夹直接拖拽到浏览器窗口
+4. 等待上传完成即可获得 `.netlify.app` 域名
+
+### 方式二：Nginx / 宝塔面板
 
 详见 [宝塔部署步骤.md](./宝塔部署步骤.md) 的完整指南，核心步骤：
 
@@ -150,9 +176,7 @@ dist/
 3. **必须配置 SSL 证书（HTTPS）** —— 摄像头 API 要求安全上下文
 4. 访问 `https://你的域名/taluo/dist/`
 
-> 如要通过根域名直接访问，修改 `vite.config.ts` 中 `base: "/"` 后重新构建。
-
-### 方式二：EdgeOne
+### 方式三：EdgeOne
 
 项目内置了 [EdgeOne](https://edgeone.ai) 配置文件：
 
@@ -166,13 +190,13 @@ edgeone deploy
 
 配置文件参考 [`edgeone.config.ts`](./edgeone.config.ts)。
 
-### 方式三：任意静态托管平台
+### 方式四：任意静态托管平台
 
-本项目为纯静态前端应用，可部署至任意静态托管服务（Vercel、Netlify、Cloudflare Pages、GitHub Pages 等）：
+本项目为纯静态前端应用，可部署至 Vercel、Cloudflare Pages、GitHub Pages 等任意静态托管服务：
 
 1. 构建：`npm run build`
 2. 上传 `dist/` 目录到托管平台
-3. 确保平台支持 SPA 路由或配置 `base` 路径（当前使用 `/taluo/dist/`）
+3. 无需额外配置，`base` 已设为 `"/"`
 
 ---
 
